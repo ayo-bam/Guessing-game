@@ -1,0 +1,42 @@
+
+   #game-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #2323; 
+}
+
+body {
+    background-color:#2223;
+}
+
+h1 {
+    color: #333333; 
+}
+
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+#you {
+    margin-top: 20px; 
+    font-weight: bold;
+    color: black; 
+}

@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="game-container">
+        <h1>Number Guessing Game</h1>
+        <p>Guess a number between 1 and 10:</p>
+        <input type="text" placeholder="Enter your number" id="me">
+        <button onclick="how()">Guess</button>
+        <p id="you"></p>
+    </section>
+    <script>
+        function how() {
+            var come = Number(document.getElementById("me").value);
+            var loveScore = Math.round(Math.random() * 10);
+            document.getElementById('you').innerHTML = `Love Score: ${loveScore}`;
+
+            if (come == "") {
+                alert("Please enter a valid number.");
+            } else {
+                if (come > 10) {
+                    alert('The number is more than 10');
+                } else if (come === loveScore) {
+                    document.getElementById('you').innerHTML = (`Congratulations 🏆! You guessed the correct number: ${loveScore}`);
+                } else if (come < loveScore) {
+                    document.getElementById('you').innerHTML = (`Too low. Try again 😢! The correct number was: ${loveScore}`);
+                } else {
+                    document.getElementById('you').innerHTML = (`Too high. Try again 😢! The correct number was: ${loveScore}`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
