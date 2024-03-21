@@ -70,21 +70,7 @@
   This content will be changed based on the screen size.
 </div>
 
-<script>
-// JavaScript code to change the inner HTML based on the media query
-// Function to update content based on screen size
-function updateContent() {
-  var content = window.matchMedia("(max-width: 600px)").matches ?
-    "Content for smaller screens" :
-    "Content for larger screens";
-  
-  document.getElementById('you').innerHTML = content;
-}
 
-// Call the function initially and whenever the window is resized
-window.onload = updateContent;
-window.onresize = updateContent;
-</script>
 
 </body>
 </html>
