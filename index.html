@@ -38,3 +38,45 @@
     </script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Query Example</title>
+<style>
+
+@media screen and (max-width: 600px) {
+  
+  #you {
+    color: red;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  
+  #you {
+    color: blue;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div id="you">
+  This content will be changed based on the screen size.
+</div>
+
+<script>
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+  document.getElementById('you').innerHTML = "Content for smaller screens";
+} else {
+  document.getElementById('you').innerHTML = "Content for larger screens";
+}
+</script>
+
+</body>
+</html>
+
