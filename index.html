@@ -20,12 +20,12 @@
             var come = Number(document.getElementById("me").value);
             var loveScore = Math.round(Math.random() * 10);
             document.getElementById('you').innerHTML = `Love Score: ${loveScore}`;
-
+            var will = "input a correct number" 
             if (come == "") {
-                alert("Please enter a valid number.");
+                alert("Please enter a valid number."); document.getElementById('you').innerHTML = will
             } else {
                 if (come > 10) {
-                    alert('The number is more than 10');
+                    alert('The number is more than 10'); document.getElementById('you').innerHTML = will
                 } else if (come === loveScore) {
                     document.getElementById('you').innerHTML = (`Congratulations 🏆! You guessed the correct number: ${loveScore}`);
                 } else if (come < loveScore) {
