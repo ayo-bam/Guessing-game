@@ -38,6 +38,8 @@
     </script>
 </body>
 </html>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,16 +47,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Media Query Example</title>
 <style>
-
-@media screen and (max-width: 500px) {
-  
+/* Your CSS styles for different screen sizes */
+/* For smaller screens */
+@media screen and (max-width: 600px) {
   #you {
     color: red;
   }
 }
 
-@media screen and (min-width: 501px) {
-  
+/* For larger screens */
+@media screen and (min-width: 601px) {
   #you {
     color: blue;
   }
@@ -63,20 +65,26 @@
 </head>
 <body>
 
-
+<!-- Your HTML content -->
 <div id="you">
   This content will be changed based on the screen size.
 </div>
 
 <script>
-
-if (window.matchMedia("(max-width: 500px)").matches) {
-  document.getElementById('you').innerHTML = "Content for smaller screens";
-} else {
-  document.getElementById('you').innerHTML = "Content for larger screens";
+// JavaScript code to change the inner HTML based on the media query
+// Function to update content based on screen size
+function updateContent() {
+  var content = window.matchMedia("(max-width: 600px)").matches ?
+    "Content for smaller screens" :
+    "Content for larger screens";
+  
+  document.getElementById('you').innerHTML = content;
 }
+
+// Call the function initially and whenever the window is resized
+window.onload = updateContent;
+window.onresize = updateContent;
 </script>
 
 </body>
 </html>
-
